@@ -18,7 +18,9 @@ class Tool extends Controller
                 $dir=WEB_ROOT.'uploads/';
                 $file = $request->file('image');
                 $url = cache($file->hash());
+
                 if(!$url) {
+//                    @unlink($dir.date('Ymd',time()-86400));
                     // 移动到框架应用根目录/public/uploads/ 目录下
                     $info = $file->validate(['size'=>20*1024*1024,'ext'=>'jpg'])->move($dir);
                     if($info){
