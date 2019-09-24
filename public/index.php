@@ -11,7 +11,8 @@
 
 // [ 应用入口文件 ]
 namespace think;
-
+// 定义网站入口目录
+define('WEB_ROOT', __DIR__ . '/');
 // 加载基础文件
 require __DIR__ . '/../thinkphp/base.php';
 

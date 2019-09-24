@@ -14,7 +14,7 @@ Route::get('think', function () {
 });
 
 Route::get('hello/:name', 'index/hello');
-
+Route::rule('tool','tool/index','GET|POST');
 return [
 
 ];
